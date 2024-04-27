@@ -1,4 +1,6 @@
 # Enqueue It
+[![Go Reference](https://pkg.go.dev/badge/github.com/cybercloudsys/enqueueit-go.svg)](https://pkg.go.dev/github.com/cybercloudsys/enqueueit-go)
+
 Easy and scalable solution for managing and executing background tasks and microservices seamlessly in .NET applications. It allows you to schedule, queue, and process your jobs and microservices efficiently.
 
 Designed to support distributed systems, enabling you to scale your background processes and microservices across multiple servers. With advanced features like performance monitoring, exception logging, and integration with various storage types, providing complete control and visibility over your workflow.

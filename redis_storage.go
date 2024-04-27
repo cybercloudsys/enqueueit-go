@@ -451,6 +451,7 @@ func (redisStorage *RedisStorage) DeleteBackgroundJob(bgJob *BackgroundJob) {
 }
 
 func (redisStorage *RedisStorage) DeleteJob(job *Job) {
+	redisStorage.client.Del(redisStorage.context, "RecurringJob:"+*job.Name)
 	redisStorage.client.LRem(redisStorage.context, "Scheduled", 0, job.Id.String())
 	redisStorage.client.LRem(redisStorage.context, "Recurring", 0, job.Id.String())
 	redisStorage.client.LRem(redisStorage.context, "QueueSchedule:"+job.Queue, 0, job.Id.String())
